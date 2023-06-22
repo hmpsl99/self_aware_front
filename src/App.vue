@@ -1,14 +1,14 @@
 <template>
-  <LoginView />
+  <InitialExamExpView />
 </template>
 
 <script>
-import LoginView from './components/LoginView.vue'
+import InitialExamExpView from './components/InitialExamExpView.vue'
 
 export default {
   name: 'App',
   components: {
-    LoginView
+    InitialExamExpView
   }
 }
 </script>
