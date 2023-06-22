@@ -1,14 +1,14 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <LoginView />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginView from './components/LoginView.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LoginView
   }
 }
 </script>
