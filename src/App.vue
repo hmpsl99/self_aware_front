@@ -1,14 +1,13 @@
 <template>
-  <InitialExamExpView />
+  <router-view></router-view>
 </template>
 
 <script>
-import InitialExamExpView from './components/InitialExamExpView.vue'
 
 export default {
   name: 'App',
   components: {
-    InitialExamExpView
+    
   }
 }
 </script>
