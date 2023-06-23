@@ -7,7 +7,7 @@
     <h3>راهکاری برای سلامت روان</h3>
   </div>
   <div>
-    <button class="btn btn-primary m-2">ورود</button>
+    <router-link to="/login"><button class="btn btn-primary m-2">ورود</button></router-link>
     <button class="btn btn-success m-2">ثبت نام</button>
   </div>
 
