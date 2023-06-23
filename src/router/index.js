@@ -6,13 +6,17 @@ import LoginView from '../components/LoginView.vue'
 import InitialTestExpView from '../components/InitialTestExpView.vue'
 import InitialTestQView from '../components/InitialTestQView.vue'
 import PageNotFoundView from '../components/PageNotFoundView.vue'
+import HomeView from '../components/HomeView.vue'
+import InitialTestResult from '../components/InitialTestResult.vue'
 
 const routes =  [
     { path: '/', name: 'Hello world' ,  component: HelloWorld },
     { path: '/login', name: 'Login' , component: LoginView},
     { path: '/initialtestexp', name: 'initial test explananation', component: InitialTestExpView},
     { path: '/initialtest' , name: 'initial test', component: InitialTestQView} ,
-    { path: '/:pathMatch(.*)*', name: '404 Page Not Found' , component: PageNotFoundView}
+    { path: '/initialtestresult' , name: 'initial test result', component: InitialTestResult} ,
+    { path: '/home' , name: 'home page', component: HomeView} ,
+    { path: '/:pathMatch(.*)*', name: '404 Page Not Found' , component: PageNotFoundView},
   ]
 
 const router = createRouter({
