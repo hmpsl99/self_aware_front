@@ -2,7 +2,7 @@
     <h1>ارزیابی اولیه</h1>
     <p> برای آشنایی بیشتر با شما نیاز هستش که به چند تا سؤال پاسخ بدین </p>
     <button @click='logout' class="btn btn-secondary m-2">خروج  </button>
-    <button class="btn btn-primary m-2">بزن بریم</button>
+    <router-link to="/initialtest"><button class="btn btn-primary m-2">بزن بریم</button></router-link>
     <p>{{ this.error }}</p>
     <div class="container p-3">
         <img src="../assets/question.png" />
