@@ -5,36 +5,45 @@
     <div v-if="!loading" class="container w-50">
         <form @submit.prevent="">
             <div class="mb-3">
-                <div class="container row">
+                <div class="row">
                     <div class="col">
-                        <label for="phone" class="form-label">شماره تلفن</label>
+                        <div> </div>
                     </div>
-                    <div class="col-9">
-                        <input v-model="phone_number" class="form-control" id="phone">
+                    <div class="col form-floating ">
+                        <input v-model="phone_number" class="form-control" id="phone" placeholder="">
+                        <label for="phone" >Phone Number</label>
+                    </div>
+                    <div class="col">
                     </div>
                 </div>
             </div>
             <div class="mb-3">
-                <div class="container row">
+                <div class="row">
                     <div class="col">
-                        <label for="password" class="form-label">گذرواژه</label>
+                        <div> </div>
                     </div>
-                    <div class="col-9">
-                        <input v-model="password"  type="password" class="form-control" id="password">
+                    <div class="col form-floating">
+                        <input v-model="password" type="password" class="form-control" id="password">
+                        <label for="password" >Password</label>
+                    </div>
+                    <div class="col">
+                        <p></p>
                     </div>
                 </div>
             </div>
-            
-            
+
+
+
         </form>
         <p>{{ error }}</p>
-        <button @click="Login()" type="submit" class="btn btn-primary  m-2">ورود</button>
         <button class="btn btn-warning m-2">حساب کاربری ندارم</button>
+        <button @click="Login()" type="submit" class="btn btn-primary  m-2">ورود</button>
+
     </div>
 
-    
+
     <div v-if="loading" class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+        <span class="visually-hidden">Loading...</span>
     </div>
 </template>
 
@@ -72,11 +81,11 @@ export default {
                 localStorage.setItem("first_name", this.user.first_name);
                 localStorage.setItem("last_name", this.user.last_name);
                 localStorage.setItem("initial_test", this.user.initial_test);
-                
+
                 if (this.user.initial_test == false) {
-                    this.$router.push({ path:'/initialtestexp' })
+                    this.$router.push({ path: '/initialtestexp' })
                 } else {
-                    this.$router.push({ path:'/home' })
+                    this.$router.push({ path: '/home' })
                 }
             } else {
                 this.error = 'یا شماره تلفن یا گذرواژه اشتباه هستند'
