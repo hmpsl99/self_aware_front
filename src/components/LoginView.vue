@@ -11,7 +11,7 @@
                     </div>
                     <div class="col form-floating ">
                         <input v-model="phone_number" class="form-control" id="phone" placeholder="">
-                        <label for="phone" >Phone Number</label>
+                        <label for="phone">Phone Number</label>
                     </div>
                     <div class="col">
                     </div>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="col form-floating">
                         <input v-model="password" type="password" class="form-control" id="password">
-                        <label for="password" >Password</label>
+                        <label for="password">Password</label>
                     </div>
                     <div class="col">
                         <p></p>
@@ -48,7 +48,12 @@
 </template>
 
 <script>
+import { useUserStore } from '../store/auth.store.js'
 export default {
+    setup() {
+        const userStore = useUserStore();
+        return { userStore };
+    },
     data() {
         return {
             phone_number: null,
@@ -90,7 +95,10 @@ export default {
             } else {
                 this.error = 'یا شماره تلفن یا گذرواژه اشتباه هستند'
             }
-        }
+        },
+        async login2() {
+            await this.userStore.signIn(this.phone_number, this.password);
+        },
     }
 }
 </script>
